@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday!</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f0e68c;
+            text-align: center;
+            padding: 50px;
+        }
+
+        h1 {
+            color: #ff6347;
+            font-size: 50px;
+            font-family: 'Brush Script MT', cursive;
+            animation: slide 5s infinite;
+        }
+
+        p {
+            font-size: 24px;
+            color: #4682b4;
+            font-family: 'Comic Sans MS', cursive;
+            animation: fade 3s infinite;
+        }
+
+        @keyframes slide {
+            0% { transform: translateX(-100%); }
+            50% { transform: translateX(0); }
+            100% { transform: translateX(100%); }
+        }
+
+        @keyframes fade {
+            0% { opacity: 0; }
+            50% { opacity: 1; }
+            100% { opacity: 0; }
+        }
+
+        .balloons {
+            margin-top: 20px;
+            font-size: 40px;
+            animation: fly 10s infinite ease-in-out;
+            position: relative;
+        }
+
+        @keyframes fly {
+            0% { bottom: -100px; }
+            50% { bottom: 500px; }
+            100% { bottom: -100px; }
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        button {
+            margin-top: 30px;
+            padding: 10px 20px;
+            font-size: 18px;
+            cursor: pointer;
+            background-color: #ff6347;
+            color: white;
+            border: none;
+            border-radius: 5px;
+        }
+
+        button:hover {
+            background-color: #ff4500;
+        }
+    </style>
+</head>
+<body>
+    <h1 id="greeting" class="hidden">Happy Birthday, [Reva Aulia Andhita]!</h1>
+    <p id="message" class="hidden">Wishing you all the best on your special day!</p>
+
+    <div class="balloons">
+        🎈🎉🎁🎂
+    </div>
+
+    <button onclick="showGreeting()">pencet ini mpaa</button>
+
+    <script>
+        function showGreeting() {
+            // Memunculkan ucapan ulang tahun dengan animasi
+            document.getElementById('greeting').classList.remove('hidden');
+            document.getElementById('message').classList.remove('hidden');
+            // Mengganti teks tombol setelah diklik
+            document.querySelector('button').textContent = 'Thanks You';
+        }
+    </script>
+</body>
+</html>
